@@ -17,6 +17,6 @@ app.get('/', async (req, res) => {
     res.json(articles)  
 })
 
-app.listen('80',()=>{
+app.listen('8080',()=>{
     console.log('app listening on port 80')
 });
