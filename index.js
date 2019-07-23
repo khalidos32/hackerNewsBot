@@ -20,6 +20,6 @@ app.get('/', async (req, res) => {
     return res.json({done:true})
 })
 
-app.listen('8080',()=>{
+app.listen(process.env.PORT || '3000',()=>{
     console.log('app listening on port 80')
 });
