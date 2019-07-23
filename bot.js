@@ -2,9 +2,7 @@ const Telegraf = require("telegraf");
 const CHANNEL_ID = '-1001456963394';
 
 let bot = new Telegraf(
-    process.env.TELEGRAM_BOT_TOKEN ||
-      "780997417:AAH_3YCAtA2g4crcXYjjgUAM6rB8Md4561k"
-  );
+    process.env.TELEGRAM_BOT_TOKEN );
 
 
 bot.telegram.getMe().then(bot_informations => {
