@@ -14,7 +14,7 @@ app.get('/', async (req, res) => {
     articles = articles.slice(0,5)
     articles.forEach(article=>promises.push(sendArticle(article.url)))
     await Promise.all(promises)
-    res.json(articles)  
+     return res.json(articles)  
 })
 
 app.listen('8080',()=>{
