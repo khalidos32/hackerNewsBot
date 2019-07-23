@@ -9,6 +9,7 @@ const TOP_NEWS = 'https://api.hnpwa.com/v0/news/1.json';
 bot.startPolling()
 
 app.get('/', async (req, res) => {
+    console.log('herewe are')
     let promises = []
     let articles = await axios.get(TOP_NEWS).then(response=>response.data)
     articles = articles.slice(0,1)
