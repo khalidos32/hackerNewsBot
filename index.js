@@ -11,10 +11,10 @@ bot.startPolling()
 app.get('/', async (req, res) => {
     let promises = []
     let articles = await axios.get(TOP_NEWS).then(response=>response.data)
-    articles = articles.slice(0,5)
+    articles = articles.slice(0,1)
     articles.forEach(article=>promises.push(sendArticle(article.url)))
     await Promise.all(promises)
-     return res.json(articles)  
+    return res.json(articles)  
 })
 
 app.listen('8080',()=>{
